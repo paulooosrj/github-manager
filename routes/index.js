@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var axios = require('axios');
-var key = "2e1e9e00581d5d86de7252e1c62ec174052268be";
+var key = require('../key');
 
 /* GET - CHECK LIST USERS */
 router.get('/:id?', async (req, res) => {
