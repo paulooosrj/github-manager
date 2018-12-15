@@ -1,0 +1,22 @@
+{
+  "name": "fullteste",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "client": "cd client && npm start",
+    "server": "node app.js",
+    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
+    "test": "SET NODE_ENV=TEST && node ./node_modules/mocha/bin/mocha --timeout 2000"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.0",
+    "concurrently": "^4.1.0",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "mocha": "^5.2.0",
+    "morgan": "~1.9.0"
+  }
+}
