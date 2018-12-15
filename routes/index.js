@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var axios = require('axios');
+var key = "4378a1b38de9e9354c1f73320abcb313d4971b7e";
 
 /* GET - CHECK LIST USERS */
 router.get('/:id?', async (req, res) => {
@@ -12,7 +13,7 @@ router.get('/:id?', async (req, res) => {
   const url = "https://api.github.com/users?since=";
   const raw = await axios.get(url + id, {
       headers: {
-          'Authorization': 'Bearer c057cc2f47ae9b8ecdf818fee9d0c122a92af138'
+          'Authorization': 'Bearer ' + key
       }
   }).catch(err => console.error(err));
   res.json(raw.data);
@@ -25,7 +26,7 @@ router.get('/user/:id', async (req, res) => {
   console.log(url);
   const raw = await axios.get(url, {
       headers: {
-          'Authorization': 'Bearer c057cc2f47ae9b8ecdf818fee9d0c122a92af138'
+          'Authorization': 'Bearer ' + key
       }
   }).catch(err => console.error(err));
   res.json(raw.data);
@@ -37,7 +38,7 @@ router.get('/user/:id/repos', async (req, res) => {
   const url = "https://api.github.com/users/" + id + "/repos";
   const raw = await axios.get(url, {
       headers: {
-          'Authorization': 'Bearer c057cc2f47ae9b8ecdf818fee9d0c122a92af138'
+          'Authorization': 'Bearer ' + key
       }
   }).catch(err => console.error(err));
   res.json(raw.data);
