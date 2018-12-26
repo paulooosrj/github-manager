@@ -4,6 +4,7 @@ Shaw and Partners test
   
 # !!IMPORTANT!!
 **please set github token in `key.js`**
+[Has token at url](http://freetexthost.com/uelfsvlpeq)
 
 ### Interface
 <img src="https://i.imgur.com/P3iKpPe.png" width="500"/>
